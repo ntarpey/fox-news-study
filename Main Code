@@ -1,0 +1,8 @@
+require "open-uri"
+url = "http://www.foxnews.com"
+pattern = "Obama"   
+
+page = open(url).read
+tags = page.scan(pattern)
+puts "The site #{url} has #{tags.length} Obama mentions"
+
